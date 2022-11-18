@@ -2,7 +2,9 @@
 
 <%= render @article %>
 
-<%= cl_image_tag("sbqxpijvi8h65cgfhdpa", width: 400, height: 300, crop: :fill) %>
+<% @article.photos.each do |photo| %>
+  <%= cl_image_tag photo.key, width: 400, height: 300, crop: :fill %>
+<% end %>
 
 <div>
   <%= link_to "Edit this article", edit_article_path(@article) %> |
