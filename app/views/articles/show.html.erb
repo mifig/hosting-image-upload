@@ -2,6 +2,8 @@
 
 <%= render @article %>
 
+<%= cl_image_tag("sbqxpijvi8h65cgfhdpa", width: 400, height: 300, crop: :fill) %>
+
 <div>
   <%= link_to "Edit this article", edit_article_path(@article) %> |
   <%= link_to "Back to articles", root_path %>
